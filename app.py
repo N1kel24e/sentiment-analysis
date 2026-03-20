@@ -18,10 +18,14 @@ st.write("Enter a movie review and I'll tell you if it's positive or negative!")
 review = st.text_area("Share your review: ")
 
 if st.button("Analyze"):
-    cleaned_review = clean_text(review)
-    vectorized = vectorizer.transform([cleaned_review])
-    result = model.predict(vectorized)
-    if result[0] == 1:
-        st.success('positive review')
+    if len(review.split()) <= 4:
+        st.warning("Please enter a longer review")
     else:
-        st.error('negative review')
+        cleaned_review = clean_text(review)
+        vectorized = vectorizer.transform([cleaned_review])
+        result = model.predict(vectorized)
+        if result[0] == 1:
+            st.success('positive review')
+        else:
+            st.error('negative review')
+
