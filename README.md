@@ -12,3 +12,6 @@ https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-review
 - pandas
 - scikit-learn
 - BeautifulSoup
+
+## Live Demo
+https://branches-wlznjgdwbzubzx4qtfditt.streamlit.app/
